@@ -1,0 +1,23 @@
+'use client'
+
+import { create } from 'zustand'
+import { persist } from 'zustand/middleware'
+
+interface ThemeState {
+  mode: 'light' | 'dark'
+  toggleTheme: () => void
+  setTheme: (mode: 'light' | 'dark') => void
+}
+
+export const useThemeStore = create<ThemeState>()(
+  persist(
+    (set) => ({
+      mode: 'dark', // Default to dark as per current UI
+      toggleTheme: () => set((state) => ({ mode: state.mode === 'light' ? 'dark' : 'light' })),
+      setTheme: (mode) => set({ mode }),
+    }),
+    {
+      name: 'fynryx-admin-theme',
+    }
+  )
+)

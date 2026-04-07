@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+:root {
+  /* Common */
+  --primary: #4f46e5; /* Indigo 600 */
+  --primary-hover: #4338ca;
+  --accent: #6366f1;
+  
+  /* Shared */
+  --font-inter: 'Inter', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+
+  /* Theme: Light */
+  --bg-main: #f8fafc; /* Slate 50 - Light Grey */
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-border: rgba(226, 232, 240, 0.8);
+  --card-hover: #f1f5f9;
+  --sidebar: #0f172a; /* Slate 900 - Dark Sidebar */
+  --sidebar-text: #94a3b8;
+  --sidebar-active: #ffffff;
+  --sidebar-border: rgba(30, 41, 59, 0.5);
+  --navbar: rgba(255, 255, 255, 0.8);
+  --text-main: #0f172a;
+  --text-muted: #94a3b8;
+  --text-dim: #475569;
+  --border-subtle: #f1f5f9;
+  --border-bold: #e2e8f0;
+  --table-header: rgba(0, 0, 0, 0.03);
+  --input-bg: rgba(0, 0, 0, 0.03);
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --shadow-main: 0 4px 20px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.06);
+}
+
+.dark {
+  /* Theme: Dark */
+  --background: #080d1a;
+  --foreground: #f8fafc;
+  --card: rgba(255, 255, 255, 0.04);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-hover: rgba(255, 255, 255, 0.02);
+  --sidebar: #0a0f1e;
+  --navbar: rgba(10, 15, 30, 0.8);
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --border-subtle: rgba(255, 255, 255, 0.04);
+  --border-bold: rgba(255, 255, 255, 0.07);
+  --table-header: rgba(255, 255, 255, 0.03);
+  --input-bg: rgba(255, 255, 255, 0.04);
+  --shadow-main: 0 4px 20px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Global Focus Styles for Accessibility */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Mobile-First Container Edge Optimization */
+@media (max-width: 640px) {
+  .max-w-7xl, .max-w-6xl, .max-w-4xl, .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+/* Premium SaaS Design Utilities */
+.elevated-card {
+  background: #ffffff;
+  border-radius: 0.75rem; /* xl - Premium rounded corners */
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.elevated-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border-color: rgba(226, 232, 240, 1);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e1;
+}
+
+/* High-Performance Animation Utilities */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slideRight 0.8s ease-out forwards;
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+}
+
+.reveal-on-scroll.intersecting {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+[data-animation-delay="100"] { animation-delay: 100ms; }
+[data-animation-delay="200"] { animation-delay: 200ms; }
+[data-animation-delay="300"] { animation-delay: 300ms; }
+[data-animation-delay="400"] { animation-delay: 400ms; }
+[data-animation-delay="500"] { animation-delay: 500ms; }
+

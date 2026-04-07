@@ -1,0 +1,6 @@
+import{e as o,a0 as s,$ as n,j as t,A as r,m as l}from"./index-5Uj7ZJbH.js";/**
+ * @license lucide-react v0.477.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const c=[["path",{d:"m12 19-7-7 7-7",key:"1l729n"}],["path",{d:"M19 12H5",key:"x3x0zl"}]],p=o("ArrowLeft",c);function d(){const a=s(),{pathname:e}=n();if(e==="/"||e.startsWith("/admin"))return null;const i=e.startsWith("/admin");return t.jsx(r,{children:t.jsxs(l.button,{initial:{opacity:0,x:-20},animate:{opacity:1,x:0},exit:{opacity:0,x:-20},whileHover:{scale:1.1,x:5},whileTap:{scale:.9},onClick:()=>a(-1),className:`fixed top-24 z-50 flex items-center gap-3 px-5 py-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full text-white font-bold text-sm shadow-2xl hover:bg-white/20 transition-all group overflow-hidden ${i?"left-72":"left-6"}`,children:[t.jsx("div",{className:"absolute inset-0 bg-linear-to-r from-blue-600/20 to-cyan-400/20 opacity-0 group-hover:opacity-100 transition-opacity"}),t.jsx(p,{size:18,className:"group-hover:-translate-x-1 transition-transform relative z-10"}),t.jsx("span",{className:"relative z-10 tracking-widest uppercase text-[10px]",children:"Back"})]})})}export{d as default};
